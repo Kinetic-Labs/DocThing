@@ -1,0 +1,20 @@
+snapshot:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/24/16.yaml
+
+packages:
+  - .
+
+nix:
+  enable: true
+  packages: []
+
+extra-deps:
+  - fourmolu-0.19.0.1@sha256:5280ea1ed8121b29bd4f602da26f4e694291b2ae9174c5d7a5e25402ef0bdd12,6224
+  - ghcide-2.12.0.0@sha256:cf614e4629b24664a5fa4ae5b11c5c1368dbbf2f4aea68a7d14c66e886d2a41c,6768
+  - hiedb-0.7.0.0@sha256:5202175221ae4071dc2e84f07b972274f839ab90d9b4b886460ccceb56567eb4,3035
+  - hls-graph-2.12.0.0@sha256:eeac7b988fbda4e56a0f89457c32d414545d94ddcb0553101c4bb7ccf330729a,3307
+  - hls-plugin-api-2.12.0.0@sha256:20c2e72ca277d72e2d5f71fda57f2d93134feff3a781bd52d9c791d5c9bffbdc,3430
+  - hls-test-utils-2.12.0.0@sha256:eed090db266064d8aed595057571e103ef043312bb15630a42f4113533f248c4,1696
+  - ormolu-0.8.0.2@sha256:4f85ee1053234827cec315f4307ce058b048ede13e29a6f2f21eaea7606261c7,5125
+  - stan-0.2.1.0@sha256:187fe45f1a13e373040929f4c490f8de7f2e2db719bfb45e167243b4ef1e39f3,9268
+  - trial-0.0.0.0@sha256:a1d26b8da6f84cd7ca26761451af6c11f6400b7fe75840ddf278cb37a0564faf,4410

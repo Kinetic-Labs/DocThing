@@ -1,0 +1,58 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           DocThing
+version:        0.1.0.0
+homepage:       https://github.com/Kinetic-Labs/DocThing#readme
+bug-reports:    https://github.com/Kinetic-Labs/DocThing/issues
+author:         Kinetic Labs
+maintainer:     hi@cirkl.ai
+copyright:      2025 Kinetic Labs
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/Kinetic-Labs/DocThing
+
+library
+  exposed-modules:
+      Ascii
+      Lib
+      Md
+  other-modules:
+      Paths_DocThing
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable DocThing-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_DocThing
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      DocThing
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite DocThing-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_DocThing
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      DocThing
+    , base >=4.7 && <5
+  default-language: Haskell2010

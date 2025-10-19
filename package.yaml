@@ -1,0 +1,45 @@
+name: DocThing
+version: 0.1.0.0
+github: "Kinetic-Labs/DocThing"
+license: MIT
+author: "Kinetic Labs"
+maintainer: "hi@cirkl.ai"
+copyright: "2025 Kinetic Labs"
+
+dependencies:
+  - base >= 4.7 && < 5
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wmissing-home-modules
+  - -Wpartial-fields
+  - -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  DocThing-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - DocThing
+
+tests:
+  DocThing-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - DocThing
