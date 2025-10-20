@@ -1,0 +1,112 @@
+:root {
+    --accent-color: #bf8fff;
+}
+
+html {
+    padding: 30px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #dddddd;
+}
+
+body {
+    margin: 0;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #333333;
+    margin: 20px 0;
+}
+
+footer {
+    padding: 20px 30px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    color: #cccccc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ffffff;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+details {
+    border: 1px solid #333333;
+    border-radius: 6px;
+    margin-bottom: 1.2em;
+    background-color: #1a1a1a;
+}
+
+summary {
+    padding: 12px 15px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    background-color: #222222;
+}
+
+summary:hover {
+    background-color: #2a2a2a;
+}
+
+details[open] > summary {
+    border-bottom: 1px solid #333333;
+}
+
+.details-content {
+    padding: 15px;
+}
+
+pre code,
+.code-block {
+    background-color: #222222;
+    color: #aaaaaa;
+    padding: 15px;
+    border-radius: 6px;
+    display: block;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+    font-size: 0.95em;
+}
+
+code,
+.code-inline {
+    background-color: #333333;
+    color: var(--accent-color);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+    font-size: 0.95em;
+}
+
+blockquote {
+    background-color: #1e1e1e;
+    border-left: 4px solid var(--accent-color);
+    color: #e0e0e0;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+}
