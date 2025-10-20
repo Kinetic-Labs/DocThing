@@ -4,6 +4,8 @@ import Ascii
 import Lib
 import System.Environment
 
+--------------------------------------------------
+
 dispatchAction :: [String] -> IO ()
 dispatchAction [input] = do
   let outputFile = getOutputFile input
@@ -15,6 +17,8 @@ dispatchAction _ = do
   let errorIcon = "\xf530  "
 
   putStrLn $ (colorCode "red") ++ errorIcon ++ "Please specify the input file (and optionally output) with docthing <input> [output]"
+
+--------------------------------------------------
 
 main :: IO ()
 main = do
@@ -28,3 +32,5 @@ main = do
   dispatchAction args
 
   putStrLn $ (colorCode "green") ++ checkIcon ++ "Done!"
+
+--------------------------------------------------

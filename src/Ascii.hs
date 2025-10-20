@@ -2,6 +2,8 @@ module Ascii (colorCode, colors, asciiArt) where
 
 import Data.Maybe
 
+--------------------------------------------------
+
 colors :: [(String, String)]
 colors =
   [ ("reset", "\ESC[0m"),
@@ -47,3 +49,5 @@ asciiArt =
        \          DocThing          \n\
        \       By Kinetic Labs      \n"
     ++ colorCode "reset"
+
+--------------------------------------------------
