@@ -23,9 +23,11 @@ main :: IO ()
 main = do
   putStrLn asciiArt
 
-  print_ok "Starting DocThing..."
+  print_info "Starting DocThing..."
 
   args <- getArgs
+
+  print_ok "Started DocThing!"
 
   dispatchAction args
 
