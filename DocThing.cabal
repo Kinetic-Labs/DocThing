@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           DocThing
-version:        0.1.0.0
+version:        0.1.1.0
 homepage:       https://github.com/Kinetic-Labs/DocThing#readme
 bug-reports:    https://github.com/Kinetic-Labs/DocThing/issues
 author:         Kinetic Labs
@@ -21,21 +21,25 @@ source-repository head
 
 library
   exposed-modules:
-      Ascii
       Lib
       Md
+      Ascii
       Print
       Web
   other-modules:
       Paths_DocThing
   hs-source-dirs:
       src
+      src/features/
+      src/utility/io
+      src/utility/misc
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , file-embed
   default-language: Haskell2010
 
-executable DocThing-exe
+executable docthing
   main-is: Main.hs
   other-modules:
       Paths_DocThing
@@ -45,6 +49,7 @@ executable DocThing-exe
   build-depends:
       DocThing
     , base >=4.7 && <5
+    , file-embed
   default-language: Haskell2010
 
 test-suite DocThing-test
@@ -58,4 +63,5 @@ test-suite DocThing-test
   build-depends:
       DocThing
     , base >=4.7 && <5
+    , file-embed
   default-language: Haskell2010

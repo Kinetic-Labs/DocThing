@@ -1,8 +1,16 @@
+--------------------------------------------------
+-- Main.hs
+-- Main entrypoint for DocThing
+--
+-- @author Thoq
+-- @since 0.1.0.0
+--------------------------------------------------
+
 module Main where
 
-import Print
-import Lib
 import Ascii
+import Lib
+import Print
 import System.Environment
 
 --------------------------------------------------

@@ -1,8 +1,16 @@
+--------------------------------------------------
+-- Lib.hs
+-- Misc utility functions
+--
+-- @since 0.1.0.0
+-- @author Thoq
+--------------------------------------------------
+
 module Lib (getOutputFile, processMd) where
 
+import Md
 import Print
 import Web
-import Md
 
 --------------------------------------------------
 

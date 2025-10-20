@@ -1,5 +1,5 @@
 name: DocThing
-version: 0.1.0.0
+version: 0.1.1.0
 github: "Kinetic-Labs/DocThing"
 license: MIT
 author: "Kinetic Labs"
@@ -8,6 +8,7 @@ copyright: "2025 Kinetic Labs"
 
 dependencies:
   - base >= 4.7 && < 5
+  - file-embed
 
 ghc-options:
   - -Wall
@@ -20,10 +21,14 @@ ghc-options:
   - -Wredundant-constraints
 
 library:
-  source-dirs: src
+  source-dirs:
+    - src
+    - src/features/
+    - src/utility/io
+    - src/utility/misc
 
 executables:
-  DocThing-exe:
+  docthing:
     main: Main.hs
     source-dirs: app
     ghc-options:
