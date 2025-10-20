@@ -31,6 +31,6 @@ main = do
 
   dispatchAction args
 
-  putStrLn $ (colorCode "green") ++ checkIcon ++ "Done!"
+  putStrLn $ (colorCode "green") ++ checkIcon ++ "Done!" ++ (colorCode "reset")
 
 --------------------------------------------------

@@ -12,6 +12,7 @@ author:         Kinetic Labs
 maintainer:     hi@cirkl.ai
 copyright:      2025 Kinetic Labs
 license:        MIT
+license-file:   LICENSE
 build-type:     Simple
 
 source-repository head

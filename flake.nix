@@ -26,6 +26,7 @@
           hPkgs.implicit-hie
           stack-wrapped
           pkgs.zlib
+          pkgs.git
         ];
 
         stack-wrapped = pkgs.symlinkJoin {
