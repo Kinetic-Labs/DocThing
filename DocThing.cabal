@@ -25,6 +25,7 @@ library
       Lib
       Md
       Print
+      Web
   other-modules:
       Paths_DocThing
   hs-source-dirs:

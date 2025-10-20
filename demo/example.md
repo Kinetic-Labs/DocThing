@@ -14,3 +14,11 @@ im a code block
 ```
 
 `im an inline code block`
+
+::: config.yml
+  ```yml
+  test:
+    - im
+    - yaml
+    - :3
+  ```
