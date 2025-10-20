@@ -9,6 +9,8 @@ copyright: "2025 Kinetic Labs"
 dependencies:
   - base >= 4.7 && < 5
   - file-embed
+  - bytestring
+  - text
 
 ghc-options:
   - -Wall

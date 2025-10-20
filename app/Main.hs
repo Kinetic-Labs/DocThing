@@ -1,3 +1,5 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 --------------------------------------------------
 -- Main.hs
 -- Main entrypoint for DocThing
@@ -9,13 +11,16 @@
 module Main where
 
 import Ascii
+import Data.Text (Text)
+import qualified Data.Text as T
+import qualified Data.Text.IO as T
 import Lib
 import Print
 import System.Environment
 
 --------------------------------------------------
 
-dispatchAction :: [String] -> IO ()
+dispatchAction :: [Text] -> IO ()
 dispatchAction [input] = do
   let outputFile = getOutputFile input
 
@@ -29,15 +34,16 @@ dispatchAction _ = do
 
 main :: IO ()
 main = do
-  putStrLn asciiArt
+  T.putStrLn asciiArt
 
   print_info "Starting DocThing..."
 
   args <- getArgs
+  let textArgs = map T.pack args
 
   print_ok "Started DocThing!"
 
-  dispatchAction args
+  dispatchAction textArgs
 
   print_ok "Done!"
 
