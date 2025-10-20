@@ -31,7 +31,8 @@ colorCode name = Data.Maybe.fromMaybe "" (lookup name colors)
 asciiArt :: String
 asciiArt =
   colorCode "brightMagenta"
-    ++ "                     ,----, \n\
+    ++ "          DocThing          \n\
+       \                     ,----, \n\
        \                   ,/   .`| \n\
        \    ,---,        ,`   .'  : \n\
        \  .'  .' `\\    ;    ;     / \n\
@@ -46,7 +47,6 @@ asciiArt =
        \;   :  .'        '---'      \n\
        \|   ,.'                     \n\
        \'---'                       \n\
-       \          DocThing          \n\
        \       By Kinetic Labs      \n"
     ++ colorCode "reset"
 
