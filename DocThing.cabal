@@ -24,6 +24,7 @@ library
       Ascii
       Lib
       Md
+      Print
   other-modules:
       Paths_DocThing
   hs-source-dirs:

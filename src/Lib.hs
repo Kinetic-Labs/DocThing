@@ -1,6 +1,6 @@
 module Lib (getOutputFile, processMd) where
 
-import Ascii
+import Print
 import Md
 
 --------------------------------------------------
@@ -94,20 +94,18 @@ footer =
 
 processMd :: [Char] -> [Char] -> IO ()
 processMd inputFile outputFile = do
-  let infoIcon = "\xf05a  "
+  print_info "Processing Markdown"
 
-  putStrLn $ (colorCode "magenta") ++ infoIcon ++ "Processing Markdown"
-
-  putStrLn $ (colorCode "magenta") ++ infoIcon ++ "Reading file"
+  print_info "Reading file"
   contents <- readFile inputFile
 
-  putStrLn $ (colorCode "magenta") ++ infoIcon ++ "Translating Markdown to HTML"
+  print_info "Translating Markdown to HTML"
   let rawHtml = convertMdToHtml contents
 
-  putStrLn $ (colorCode "magenta") ++ infoIcon ++ "Patching HTML"
+  print_info "Patching HTML"
   let html = styles ++ rawHtml ++ footer
 
-  putStrLn $ (colorCode "magenta") ++ infoIcon ++ "Writing result"
+  print_info "Writing result"
   writeFile outputFile html
 
 --------------------------------------------------

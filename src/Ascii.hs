@@ -1,4 +1,4 @@
-module Ascii (colorCode, colors, asciiArt) where
+module Ascii (colorCode, colors, asciiArt, reset) where
 
 import Data.Maybe
 
@@ -27,6 +27,9 @@ colors =
 
 colorCode :: String -> String
 colorCode name = Data.Maybe.fromMaybe "" (lookup name colors)
+
+reset :: String
+reset = colorCode $ "reset"
 
 asciiArt :: String
 asciiArt =
